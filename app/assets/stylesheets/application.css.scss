@@ -24,22 +24,33 @@ body {
 #logo {
   
   font-size: 1.7em;
-  color: #FFC43D;
-  // text-transform: uppercase;
+  color: #c9d6ea;
   letter-spacing: -1px;
   font-weight: bold;
 }
   
 #logo:hover {
-  color: #c9d6ea;
+  color: #113a7a;
   text-decoration: none;
 }  
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 100;
-	color: #529ECC;
+	color: #6287c1;
 	font-weight: bold;
 	text-align: center;
+}
+
+.card {
+	margin-top: 5px;
+}
+
+.btn-color {
+	background-color: #6287c1;
+}
+
+.btn-color:hover {
+	background-color: #c9d6ea;
 }
 
 #pics {
@@ -79,7 +90,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #pic_show {
-	.panel-heading {
+	.card-heading {
 		padding: 0;
 	}
 	.pic_image {
@@ -90,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 			margin: 0 auto;
 		}
 	}
-	.panel-body {
+	.card-body {
 		padding: 35px;
 		h1 {
 			margin: 0 0 10px 0;
@@ -105,7 +116,7 @@ h1, h2, h3, h4, h5, h6 {
 			text-align: center;
 		}
 	}
-	.panel-footer {
+	.card-footer {
 		padding: 20px 25px;
 		p {
 			margin: 0;
