@@ -1,10 +1,32 @@
-<%= link_to (image_tag @pic.image.url(:medium)) %>
-<h1><%= @pic.title %></h1>
+<div class="row" id="pic_show"></div>
+  <div class="col-sm-6 ml-sm-auto mr-sm-auto text-center">
+    <div class="card">
+      <div class="card-heading pic_image">
+        <%= link_to (image_tag @pic.image.url(:medium)) %>
+      </div>
+      <div class="card-body">
+        <h1><%= @pic.title %></h1>
+        <p><%= @pic.description %></p>
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-sm-8">
+            <p class="user"> by: <%= @pic.user.email %></p>
+          </div>
+          <div class="col-sm-4">
+            <div class="btn-group mr-auto">
+              <% if user_signed_in? %>
+                <%= link_to "Edit", edit_pic_path, 
+                    class: 'badge badge-pill badge-warning' %> 
+                <%= link_to "Delete", pic_path, method: :delete, 
+                    data: { confirm: "Are you sure?" },
+                    class: 'badge badge-pill badge-danger' %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<p><%= @pic.description %></p>
-<p>Pic posted by: <%= @pic.user.email %></p>
-
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_pic_path %>
-<%= link_to "Delete", pic_path, method: :delete, 
-            data: { confirm: "Are you sure?" } %>
