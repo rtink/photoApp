@@ -1,1 +1,13 @@
-<h1>placeholer</h1>
+<div class="col">
+  <h1>Pics</h1>
+  
+  <% @pics.each do |pic| %>
+  <div class="row">
+    <h2><%= link_to pic.title, pic %></h2>
+    <p><%= truncate(pic.description, length: 150) %></p>
+    <p><%= time_ago_in_words(pic.created_at) %> ago</p>
+    </div>
+  <% end %>
+  
+  <%= link_to "Post Pic", new_pic_path %>
+</div>
