@@ -1,0 +1,15 @@
+<div class='container'>
+ <div class='justify-content-md-center'>
+    <% flash.each do |type, msg| %>
+    <div class="alert alert-<%= bootstrap_class_for(type) %> alert-dismissible fade show" role="alert">
+        <i class="<%= 'fa fa-check-circle-o' if flash[:success] %>" aria-hidden="true"></i>
+        <i class="<%= 'fa fa-exclamation-circle' if flash[:warning] %>" aria-hidden="true"></i>
+        <i class="<%= 'fa fa-exclamation-triangle' if flash[:danger] %>" aria-hidden="true"></i>
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <%= msg %>
+    </div>
+    <% end %>
+  </div>
+</div>
