@@ -1,6 +1,7 @@
 <h1><%= @pic.title %></h1>
 
 <p><%= @pic.description %></p>
+<p>Pic posted by: <%= @pic.user.email %></p>
 
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_pic_path %>
