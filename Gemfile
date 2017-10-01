@@ -22,6 +22,7 @@ gem 'autoprefixer-rails', '~> 7.1.3'
 gem 'popper_js', '~> 1.11.1'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'devise', '~> 4.2'
+gem 'masonry-rails', '~> 0.2.4'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes

@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require popper
 //= require bootstrap
+//= require masonry/jquery.masonry
 //= require turbolinks
 //= require_tree .

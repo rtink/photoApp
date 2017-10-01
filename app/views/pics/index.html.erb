@@ -1,11 +1,12 @@
-<div class="col">
-  
-  <% @pics.each do |pic| %>
-  <div class="row">
-    <%= link_to (image_tag pic.image.url(:medium)), pic_path(pic) %>
-    <h2><%= link_to pic.title, pic %></h2>
-    <p><%= truncate(pic.description, length: 150) %></p>
-    <p><%= time_ago_in_words(pic.created_at) %> ago</p>
+<div class="col-sm-6 ml-sm-auto mr-sm-auto text-center">
+ <div id="pics" class="transitions-enabled"></div> 
+    <% @pics.each do |pic| %>
+    <div class="card">
+      <%= link_to (image_tag pic.image.url(:medium)), pic_path(pic) %>
+      <h2><%= link_to pic.title, pic %></h2>
+      <p><%= truncate(pic.description, length: 150) %></p>
+      <p><%= time_ago_in_words(pic.created_at) %> ago</p>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
