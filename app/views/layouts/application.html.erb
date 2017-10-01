@@ -9,7 +9,12 @@
   </head>
 
   <body>
-    <%= render 'layouts/flash', flash: flash %>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
+    
+    <div class="container">
+      <%= render 'layouts/flash', flash: flash %>
+      <%= yield %>
+    </div>
+    
   </body>
 </html>
