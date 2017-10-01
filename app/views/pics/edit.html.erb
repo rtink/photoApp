@@ -4,6 +4,9 @@
       <h1>Edit Pic</h1>  
     </div>
     <div class="card-body">
+      <div class="current_image"><strong>Current Pic</strong>
+        <%= link_to (image_tag @pic.image.url(:medium)) %>
+      </div>
       <%= render 'form' %>  
     </div>
   </div>

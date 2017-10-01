@@ -2,6 +2,7 @@
 
 <%= simple_form_for(@pic, :html => {class: 'form-group', multipart: true, role: 'form' }) do |f| %>
 
+  <%= f.input :image, class: 'form-control' %>
   <%= f.input :title, class: 'form-control' %>
   <%= f.input :description, class: 'form-control' %>
   <%= f.button :submit, class: 'btn btn-info btn-sm btn-color' %>
