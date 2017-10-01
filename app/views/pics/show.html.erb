@@ -15,6 +15,11 @@
           </div>
           <div class="col-sm-4">
             <div class="btn-group mr-auto">
+              <%= link_to like_pic_path(@pic), 
+                  method: :put, class: 'badge badge-pill badge-secondary' do %>
+                  <span><i class="fa fa-thumbs-up" aria-hidden="true"></i></span>
+                  <%= @pic.get_upvotes.size %>
+              <% end %>
               <% if user_signed_in? %>
                 <%= link_to "Edit", edit_pic_path, 
                     class: 'badge badge-pill badge-warning' %> 
